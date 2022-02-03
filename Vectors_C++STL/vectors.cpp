@@ -23,42 +23,25 @@
    #define loop(i,a,b)     for(int i=(a);i<=(b);i++)
    #define looprev(i,a,b)  for(int i=(a);i>=(b);i--)
 
-   int Pesky(int n)
-   {
-        int r = 0;
-        for (int i = 1; i <= n; i++)
-        {
-             for (int j = 1; j <= i; j++)
-             {
-                  for (int k = j; k <= i + j; k++)
-                  {
-                       r = r + 1;
-                  }
-             }
-        }
-        return r;
-   }
-
    int main(){
 
-        ios_base::sync_with_stdio(false);
-        cin.tie(NULL);
+          ios_base::sync_with_stdio(false);
+          cin.tie(NULL);
 
-        int t,n; cin>>t>>n;
+          int t,n; cin>>t>>n;
 
-        vi v(n);
-        while(t--){
-          loop(i,0,n-1){
-             cin>>v[i];
-           }
-          loop(i,0,n-1){
-                cout<<v[i]<<" ";
-           }
-            cout<<endl;
-        }
+          vi v(n);
+          while(t--){
+            loop(i,0,n-1){
+                cin>>v[i];
+             }
+            loop(i,0,n-1){
+                    cout<<v[i]<<" ";
+             }
+               cout<<endl;
+          }
+      
 
-     
-
-        return 0;  
+          return 0;  
 
    }
